@@ -193,7 +193,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: -0.0390625, y: 0, z: 7, w: 7}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 1348593308}
   - component: {fileID: 1348593307}
   - component: {fileID: 1348593306}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!135 &1666994187
 SphereCollider:
@@ -429,7 +429,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666994185}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3bb68d98b3b504747a4e3011f052df61, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -506,6 +506,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62fe9833ebc6b814eb6b440e47e8a94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
-  sideForce: 10
-  keyrightPressed: 0
+  velocity: {x: 0, y: 0, z: 0}
+  isMoving: 0
+  isJumping: 0
+  isFalling: 0
+  isGrounded: 0
+  inputVector: {x: 0, y: 0}
+  direction: {x: 0, y: 0, z: 0}
+  moveSpeed: 7
+  maxSpeed: 15
+  jumpForce: 12
+  playerGravity: 7
+  sphereRadius: 0.2
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 32768
+  groundCheckOffset: -0.5
